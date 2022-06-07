@@ -296,6 +296,20 @@ INVERSE_G_FIELD = [[0x0e, 0x0b, 0x0d, 0x09],
 INDEX_DICT = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'a': 10, 'b': 11,
               'c': 12, 'd': 13, 'e': 14, 'f': 15}
 
+def main():
+    # From Appendix B NIST FIPS-197
+    text = '3243f6a8885a308d313198a2e0370734'
+    key = '2b7e151628aed2a6abf7158809cf4f3c'
+    encrypt = Encrypt(text=text, key=key).cipher_text
+    decrypt = Decrypt(text=encrypt, key=key).plain_text
+    print(f'\nPlain text  : {decrypt}')
+    print(f'Key         : {key}')
+    print(f'Cipher text : {encrypt}')
+
+
+if __name__ == "__main__":
+    main()
+
 # From Appendix B NIST FIPS-197
 # text_input0 = '3243f6a8885a308d313198a2e0370734'
 # key_input0 = '2b7e151628aed2a6abf7158809cf4f3c'
