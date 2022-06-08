@@ -1,5 +1,4 @@
 # 128-bit AES ECB on pure-Python(no extension or library used)
-# handcrafted by caniggia-syabil, caniggia.syabil@ui.ac.id
 
 def galois_field(hex_a, hex_b):
     p = 0
