@@ -1,4 +1,4 @@
-# 128-bit-AES-ECB
+# 128-bit AES ECB
 My own handcrafted 128-bit AES electronic code book.
 128-bit only, no option to go for 192 or 256.
 It's ECB, can't take any Initialization Vector.
